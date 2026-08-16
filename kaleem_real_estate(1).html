@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaleem Real Estate | Properties for Sale</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:#172033;background:#f7f8fa}
+header{background:#0d1b2a;color:white;position:sticky;top:0;z-index:5}
+.nav{max-width:1120px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:800}.logo span{color:#d4af37}
+nav a{color:white;text-decoration:none;margin-left:22px;font-size:14px}
+.hero{background:linear-gradient(135deg,#0d1b2a,#19324b);color:white;padding:75px 22px}
+.hero-inner{max-width:1120px;margin:auto}.eyebrow{color:#d4af37;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(40px,7vw,68px);line-height:1.02;margin:14px 0}.hero p{font-size:18px;max-width:620px;color:#dbe4ed}
+.search{background:white;border-radius:16px;padding:14px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;max-width:1000px;margin-top:28px;box-shadow:0 15px 40px #0003}
+input,select{border:1px solid #dfe3e8;border-radius:10px;padding:14px;font-size:14px;outline:none}
+.btn{border:0;border-radius:10px;padding:14px 20px;font-weight:700;cursor:pointer;background:#d4af37;color:#111}
+.section{max-width:1120px;margin:auto;padding:55px 22px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}
+h2{font-size:32px;margin:0}.muted{color:#697586}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 7px 25px #17203312}
+.pic{height:210px;background:linear-gradient(135deg,#cbd5e1,#94a3b8);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.body{padding:18px}.price{font-size:22px;font-weight:800;margin:8px 0}.tag{display:inline-block;background:#eef4f8;padding:6px 9px;border-radius:20px;font-size:12px;margin-right:5px}
+.actions{display:flex;gap:8px;margin-top:15px}.actions a{flex:1;text-align:center;text-decoration:none;padding:11px;border-radius:9px;font-weight:700;font-size:13px}.call{background:#0d1b2a;color:white}.wa{background:#e9f8ef;color:#147a3c}
+.sell{background:#fff;border-top:1px solid #eee}.sell-box{background:#0d1b2a;color:white;border-radius:20px;padding:35px;display:flex;justify-content:space-between;align-items:center;gap:25px}.sell h2{color:white}
+footer{background:#0d1b2a;color:#b9c5d1;padding:30px 22px}.footer-inner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){nav{display:none}.search{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.sell-box,.footer-inner{flex-direction:column;align-items:flex-start}h1{font-size:46px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">Kaleem <span>Real Estate</span></div><nav><a href="#properties">Properties</a><a href="#sell">Sell Property</a><a href="#contact">Contact</a></nav></div></header>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="eyebrow">Only Properties for Sale</div>
+<h1>Find a property<br>worth owning.</h1>
+<p>Discover residential, commercial and land properties for sale through Kaleem Real Estate.</p>
+<div class="search">
+<input id="location" placeholder="Search location">
+<select id="type"><option value="">Property type</option><option>House</option><option>Apartment</option><option>Plot</option><option>Commercial</option></select>
+<select id="budget"><option value="">Budget</option><option>Under ₹25 Lakh</option><option>₹25–50 Lakh</option><option>₹50 Lakh–₹1 Cr</option><option>Above ₹1 Cr</option></select>
+<button class="btn" onclick="searchProps()">Search</button>
+</div>
+</div>
+</section>
+
+<section class="section" id="properties">
+<div class="section-head"><div><h2>Featured Properties</h2><div class="muted">Selected properties available for sale</div></div></div>
+<div class="cards" id="cards">
+<div class="card"><div class="pic">PROPERTY PHOTO</div><div class="body"><span class="tag">House</span><span class="tag">For Sale</span><div class="price">₹75 Lakh</div><b>3 BHK Independent House</b><p class="muted">Hyderabad • 1,800 sq.ft.</p><div class="actions"><a class="call" href="tel:+917032546201">Call</a><a class="wa" href="https://wa.me/919999999999">WhatsApp</a></div></div></div>
+<div class="card"><div class="pic">PROPERTY PHOTO</div><div class="body"><span class="tag">Plot</span><span class="tag">For Sale</span><div class="price">₹32 Lakh</div><b>Residential Plot</b><p class="muted">Secunderabad • 200 sq.yd.</p><div class="actions"><a class="call" href="tel:+917032546201">Call</a><a class="wa" href="https://wa.me/919999999999">WhatsApp</a></div></div></div>
+<div class="card"><div class="pic">PROPERTY PHOTO</div><div class="body"><span class="tag">Commercial</span><span class="tag">For Sale</span><div class="price">₹1.20 Cr</div><b>Commercial Property</b><p class="muted">Hyderabad • 2,400 sq.ft.</p><div class="actions"><a class="call" href="tel:+917032546201">Call</a><a class="wa" href="https://wa.me/919999999999">WhatsApp</a></div></div></div>
+</div>
+</section>
+
+<section class="section sell" id="sell"><div class="sell-box"><div><h2>Want to sell your property?</h2><p>List your property with Kaleem Real Estate and connect with interested buyers.</p></div><a class="btn" href="https://wa.me/917032546201?text=I%20want%20to%20list%20my%20property%20for%20sale">List Property</a></div></section>
+
+<footer id="contact"><div class="footer-inner"><div><b style="color:white">Kaleem Real Estate</b><br>Properties for Sale</div><div>Call: <a style="color:white" href="tel:+917032546201">+91 70325 46201</a><br>WhatsApp enquiries welcome</div></div></footer>
+
+<script>
+function searchProps(){
+ const q=document.getElementById('location').value.trim();
+ const type=document.getElementById('type').value;
+ const budget=document.getElementById('budget').value;
+ alert("Search submitted" + (q?": "+q:"") + (type?" • "+type:"") + (budget?" • "+budget:"") + ". Connect your listings database to make this live.");
+}
+</script>
+</body>
+</html>
